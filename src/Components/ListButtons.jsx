@@ -5,7 +5,7 @@ function DisplayButtons(props) {
     const { id, button} = props.data
 
     const hanldeClick =(e)=>{
-        alert(`Button ${e.currentTarget.id} was clicked`)
+        alert(`You Clicked on Button ${e.currentTarget.id}`)
     }
   return (
     <div className='flex gap-3 items-center my-auto'>
