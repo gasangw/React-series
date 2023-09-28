@@ -15,8 +15,9 @@ function FetchUser() {
 
   console.log(users)
   return (
-    <div className='grid place-content-center align-middle h-[100vh]'>
-        <button className='w-fit text-2xl font-bold bg-red-700 text-white py-2 px-6 rounded-xl text-center'>Fetch Random</button>
+    <div className='relative'>
+     <button className='w-fit flex mx-auto my-11 text-2xl font-bold bg-red-700 text-white py-2 px-6 rounded-xl text-center'>Fetch Random</button>
+    <div className='flex flex-wrap gap-3 place-content-center align-middle'>
         {users && users.map(user => {
             return (
                 <div key={user.id}>
@@ -25,6 +26,7 @@ function FetchUser() {
             )
         })}
     </div>
+ </div>
   )
 }
 
