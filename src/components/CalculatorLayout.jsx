@@ -10,7 +10,6 @@ function CalculatorLayout() {
           <input
                 type="button"
                 value="AC"
-                className="button-clear"
             />
             <input
                 type="button"
