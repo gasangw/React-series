@@ -1,114 +1,117 @@
-import React from 'react'
-
+import React, {useState} from 'react'
 
 function CalculatorLayout() {
+    const [count, setCount] = useState(0)
+    const clickHandler = (e)=>{
+      const buttonName = e.target.value
+    }
   return (
     <div className='grid mt-12'>
        <div className='grid bg-slate-200 mx-auto w-2/5 h-96'>
-          <button className='text-xl font-semibold bg-gray-400 py-2'>1</button>
+          <button className='text-xl font-semibold bg-gray-400 py-2'>0</button>
           <div className='grid grid-cols-4'>
           <input
                 type="button"
                 value="AC"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="+/-"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="%"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="&#247;"
                 className="bg-orange-500 text-white"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="7"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="8"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="9"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="x"
                 className="bg-orange-500 text-white"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="4"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="5"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="6"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="-"
                 className="bg-orange-500 text-white"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="1"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="2"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="3"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="+"
                 className="bg-orange-500 text-white"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
 
             <input
                 type="button"
                 value="0"
                 className='grid col-span-2'
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="."
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
             <input
                 type="button"
                 value="="
                 className="bg-orange-500 text-white"
-                onChange={clickHandler}
-            />
+                onClick={clickHandler}
+                />
           </div>
        </div>
     </div>
