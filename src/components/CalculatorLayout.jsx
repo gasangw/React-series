@@ -1,14 +1,16 @@
 import React, {useState} from 'react'
+import calculate from './Calculator'
 
 function CalculatorLayout() {
     const [count, setCount] = useState(0)
     const clickHandler = (e)=>{
       const buttonName = e.target.value
+      setCount((prevState) => calculate(prevState, buttonName))
     }
   return (
     <div className='grid mt-12'>
        <div className='grid bg-slate-200 mx-auto w-2/5 h-96'>
-          <button className='text-xl font-semibold bg-gray-400 py-2'>0</button>
+          <button className='text-xl font-semibold bg-gray-400 py-2'>{count.total}{count.operate}{count.next}</button>
           <div className='grid grid-cols-4'>
           <input
                 type="button"
