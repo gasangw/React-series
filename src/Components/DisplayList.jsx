@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react"
 
 function DisplayList({animal}) {
   return (
     <ul>
-      <li className='text-base font-semibold font-sans list-disc'>{animal}</li>
+      <li className="text-base font-semibold font-sans list-disc">{animal}</li>
     </ul>
   )
 }
