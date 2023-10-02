@@ -5,8 +5,8 @@ import Home from './Components/Home'
 import AllVans from './Components/AllVans'
 import Footer from './Components/Footer'
 import { Routes, Route } from 'react-router-dom'
-function App() {
 
+function App() {
   return (
     <>
      <Navbar />
