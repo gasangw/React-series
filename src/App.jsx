@@ -1,16 +1,14 @@
 function App() {
- let data = ['dog', 'cat', 'chicken', 'cow', 'sheep', 'horse']
+ let data = ['dog', 'cat', 'chicken', 'cow', 'sheep', 'horse'];
+
+ let myAnimals = data.map((animal, index) => (<li className='text-base list-disc' key={index}>{animal}</li>))
+ 
   return (
     <div className="grid justify-center align-middle mx-auto mt-9">
-     {data.map((animal, index) => {
-      return (
-        <ul key={index}>
-           <li className='text-base list-disc'>{animal}</li>
-        </ul>
-      )
-     })}
+      <ul>
+         {myAnimals}
+      </ul>
     </div>
   )
 }
-
 export default App
