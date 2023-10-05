@@ -1,3 +1,4 @@
+import React from "react";
 import uuid from "react-uuid";
 export default function HandleClickEvents() {
     function clickHandler(){
