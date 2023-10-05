@@ -1,4 +1,4 @@
-import uuid from "react-uuid";
+import { v4 as uuid_v4 } from "uuid";
 export default function HandleClickEvents() {
     function clickHandler(){
         alert("Clicked")
@@ -9,7 +9,7 @@ export default function HandleClickEvents() {
       <div className="flex gap-1">
         {topNav.map(element => {
           return (
-            <ul key={uuid()}>
+            <ul key={uuid_v4()}>
               <li className="underline pr-1 border-r-2 border-black">{element}</li>
             </ul>
           )
