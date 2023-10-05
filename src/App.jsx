@@ -1,6 +1,6 @@
 import HandleClickEvents from "./Components/HandleEvents"
 function App() {
-  return   <HandleClickEvents />
+  return (<HandleClickEvents />)
 }
 
 export default App
