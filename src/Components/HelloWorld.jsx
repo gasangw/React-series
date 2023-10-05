@@ -1,5 +1,3 @@
-import React from 'react'
-
 function HelloWorld() {
   return (
     <div className='h-[100vh] bg-yellow-400 text-center grid my-auto place-content-center'>
