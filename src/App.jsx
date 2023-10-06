@@ -1,10 +1,6 @@
+import MyButton from "./Components/MapAllButtons"
 function App() {
-
-  return (
-    <>
-  
-    </>
-  )
+  return  <MyButton />
 }
 
 export default App
