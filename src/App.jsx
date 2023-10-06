@@ -1,10 +1,6 @@
+import FetchUser from "./Components/FetchUser"
 function App() {
-
-  return (
-    <>
-  
-    </>
-  )
+  return <FetchUser />
 }
 
 export default App
