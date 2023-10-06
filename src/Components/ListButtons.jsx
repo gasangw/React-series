@@ -1,8 +1,8 @@
 function DisplayButtons(props) {
     const { id, button} = props.data
   
-    const hanldeClick =(e)=>{
-        alert(`You Clicked on Button ${e.currentTarget.id}`)
+    const hanldeClick =(event)=>{
+        alert(`You Clicked on Button ${event.currentTarget.id}`)
     }
   return (
     <div className="flex gap-3 items-center my-auto">
@@ -12,8 +12,3 @@ function DisplayButtons(props) {
 }
 
 export default DisplayButtons
-
-// 
-// return (
-//   <div className="grid place-content-center my-auto h-[100vh]">
-//     <div className="flex gap-1">
