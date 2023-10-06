@@ -1,5 +1,5 @@
 import DisplayUsers from "./DisplayUsers";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function FetchUser() {
   const [users, setUsers] = useState([]);

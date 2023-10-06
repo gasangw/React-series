@@ -1,5 +1,3 @@
-import React from "react";
-
 function DisplayUsers(props) {
     const {avatar, email,first_name, last_name, employment: {title}, address: {city, state, country} }= props.data
   return (
