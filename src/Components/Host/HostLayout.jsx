@@ -7,10 +7,11 @@ function HostLayout() {
     textDecoration: "underline"
   }
   return (
-    <div>
+    <div className="bg-[#FFF7ED]">
         <nav className='flex gap-3 pt-6 font-semibold pl-16 text-gray-400'>
            <NavLink 
            to='/host' 
+           end
            className="hover:font-bold hover:underline"
            style={({isActive})=> isActive ? activeStyle : null}
            >
@@ -22,6 +23,13 @@ function HostLayout() {
            style={({isActive})=> isActive ? activeStyle : null}
            >
             Income
+          </NavLink>
+          <NavLink 
+           to='/host/vans' 
+           className="hover:font-bold hover:underline"
+           style={({isActive})=> isActive ? activeStyle : null}
+           >
+            Vans
           </NavLink>
            <NavLink 
            to='/host/reviews' 

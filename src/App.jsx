@@ -9,6 +9,8 @@ import Dashboard from './Components/Host/Dashboard'
 import Income from './Components/Host/Income'
 import Reviews from './Components/Host/Reviews'
 import HostLayout from './Components/Host/HostLayout'
+import SubVans from './Components/Host/SubVans'
+import SubVansDetails from './Components/Host/SubVansDetails'
 import {Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
           <Route path="/host" element={<HostLayout/>}>
             <Route index element={< Dashboard />} />
             <Route path="income" element={<Income />} />
+            <Route path="vans" element={<SubVans />} />
+            <Route path="vans/:id" element={<SubVansDetails />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
 
