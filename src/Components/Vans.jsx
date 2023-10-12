@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import "./server";
 
 function Vans() {
   const [vans, setVans] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams()
+
+  let typeFilter = searchParams.get('type')
+  console.log(typeFilter)
 
   useEffect(() => {
     fetch("/api/vans")
@@ -11,38 +15,40 @@ function Vans() {
       .then((data) => setVans(data.vans));
   }, []);
 
+  const filteredVans = typeFilter ? vans.filter(data => data.type.toLowerCase() === typeFilter) : vans
+
   return (
     <div className="bg-[#FFF7ED] text-[#161616] px-14">
       <h1 className="text-4xl font-bold py-5">Explore our van options</h1>
       <div className="flex space-x-4 text-[#4d4d4d]">
-        <input
-          type="button"
-          name="Simple"
-          value="Simple"
+        <Link
+         to="?type=simple"
           className="bg-[#FFEAD0] border-none outline-none font-medium px-8 py-2 rounded-lg w-fit cursor-pointer"
-        />
-        <input
-          type="button"
-          name="Luxury"
-          value="Luxury"
+          >
+          Simple
+        </Link>
+        <Link
+         to="?type=luxury"
           className="bg-[#FFEAD0] border-none outline-none font-medium px-8 py-2 rounded-lg w-fit cursor-pointer"
-        />
-        <input
-          type="button"
-          name="Rugged"
-          value="Rugged"
+        >
+         Luxury
+        </Link>
+        <Link
+         to="?type=rugged"
           className="bg-[#FFEAD0] border-none outline-none font-medium px-8 py-2 rounded-lg w-fit cursor-pointer"
-        />
-        <input
-          type="button"
-          name="Clear filters"
-          value="Clear filters"
+        >
+         Rugged
+        </Link>
+        <Link
+         to="."
           className="border-none outline-none font-medium underline w-fit cursor-pointer"
-        />
+        >
+          Clear filters
+        </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 py-5 gap-5">
-        {vans &&
-          vans.map((van) => {
+        {filteredVans &&
+          filteredVans.map((van) => {
             return (
               <Link to={`/vans-details/${van.id}`}>
               <div key={van.id} className="grid">
