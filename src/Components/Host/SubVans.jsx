@@ -17,7 +17,7 @@ function SubVans() {
       {
         hostVans && hostVans.map(van => {
           return (
-            <Link to={`host/vans/${van.id}`}>
+            <Link to={`/host/vans/${van.id}`}>
               <div key={van.id} className='grid grid-cols-2 bg-white rounded-xl gap-4 p-4'>
                 <div>
                     <img src={van.imageUrl} alt={van.name} className='rounded-lg w-1/4'/>
