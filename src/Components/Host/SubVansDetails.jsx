@@ -24,7 +24,9 @@ function SubVansDetails() {
             <p className='underline text-[#858585] text-base'>Back to all vans</p> 
          </Link>
        </div>
-      <div className="grid grid-cols-2 bg-white rounded-2xl h-fit p-8">
+      <div className="bg-white rounded-2xl h-fit p-8">
+
+      <div className="grid grid-cols-2">
          <div>
           <img src={currentVan.imageUrl} alt={currentVan.name} className="h-56 rounded-xl"/>
          </div>
@@ -45,11 +47,10 @@ function SubVansDetails() {
            <p className="font-bold text-xl">{currentVan.name}</p>
            <p className="font-medium text-lg">${currentVan.price}/pay</p>
          </div>
-      </div>
-       <div className="pb-32 mt-2">
+       <div className="mt-5">
        <nav className='flex gap-3 font-semibold pl-12 text-gray-400'>
            <NavLink 
-           to='..' 
+           to='.' 
            end
            className="hover:font-bold hover:underline"
            style={({isActive})=> isActive ? activeStyle : null}
@@ -57,14 +58,14 @@ function SubVansDetails() {
             Details
           </NavLink>
            <NavLink 
-           to='' 
+           to='price' 
            className="hover:font-bold hover:underline"
            style={({isActive})=> isActive ? activeStyle : null}
            >
             Pricing
           </NavLink>
           <NavLink 
-           to='' 
+           to='photo' 
            className="hover:font-bold hover:underline"
            style={({isActive})=> isActive ? activeStyle : null}
            >
@@ -72,7 +73,9 @@ function SubVansDetails() {
           </NavLink>
        </nav>
        </div>
-       <Outlet />
+      </div>
+       <Outlet context={[currentVan]}/>
+     </div>
     </div>
   )
 }

@@ -11,7 +11,10 @@ import Reviews from './Components/Host/Reviews'
 import HostLayout from './Components/Host/HostLayout'
 import SubVans from './Components/Host/SubVans'
 import SubVansDetails from './Components/Host/SubVansDetails'
-import {Routes, Route } from 'react-router-dom'
+import SubVansDetails2 from './Components/Host/SubVansDetails2'
+import SubVansPhoto from './Components/Host/SubVansPhoto'
+import SubVansPricing from './Components/Host/SubVansPricing'
+import {Routes, Route, Outlet } from 'react-router-dom'
 
 function App() {
   return (
@@ -29,7 +32,11 @@ function App() {
             <Route index element={< Dashboard />} />
             <Route path="income" element={<Income />} />
             <Route path="vans" element={<SubVans />} />
-            <Route path="vans/:id" element={<SubVansDetails />} />
+            <Route path="vans/:id" element={<SubVansDetails />}>
+                <Route index element={<SubVansDetails2 />} />
+                <Route path="price" element={<SubVansPricing/>} />
+                <Route path="photo" element={<SubVansPhoto />} />
+            </Route>
             <Route path="reviews" element={<Reviews />} />
           </Route>
 

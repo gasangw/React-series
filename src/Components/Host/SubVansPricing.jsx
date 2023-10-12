@@ -1,8 +1,9 @@
-import React from 'react'
+import { useOutletContext } from "react-router-dom"
 
 function SubVansPricing() {
+    const [currentVan] = useOutletContext()
   return (
-    <div>SubVansPricing</div>
+    <div className="pt-3 font-bold">${currentVan.price}/day</div>
   )
 }
 
