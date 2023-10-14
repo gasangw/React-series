@@ -1,5 +1,3 @@
-import React from "react"
-
 function DisplayList({animal}) {
   return (
     <div>
