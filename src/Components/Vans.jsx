@@ -7,7 +7,6 @@ function Vans() {
   const [searchParams, setSearchParams] = useSearchParams()
 
   let typeFilter = searchParams.get('type')
-  console.log(typeFilter)
 
   useEffect(() => {
     fetch("/api/vans")
@@ -21,30 +20,30 @@ function Vans() {
     <div className="bg-[#FFF7ED] text-[#161616] px-14">
       <h1 className="text-4xl font-bold py-5">Explore our van options</h1>
       <div className="flex space-x-4 text-[#4d4d4d]">
-        <Link
-         to="?type=simple"
+        <button
+          onClick={()=> setSearchParams({type: "simple"})}
           className="bg-[#FFEAD0] border-none outline-none font-medium px-8 py-2 rounded-lg w-fit cursor-pointer"
           >
           Simple
-        </Link>
-        <Link
-         to="?type=luxury"
+        </button>
+        <button
+         onClick={()=> setSearchParams({type: "luxury"})}
           className="bg-[#FFEAD0] border-none outline-none font-medium px-8 py-2 rounded-lg w-fit cursor-pointer"
         >
          Luxury
-        </Link>
-        <Link
-         to="?type=rugged"
+        </button>
+        <button
+         onClick={()=> setSearchParams({type: "rugged"})}
           className="bg-[#FFEAD0] border-none outline-none font-medium px-8 py-2 rounded-lg w-fit cursor-pointer"
         >
          Rugged
-        </Link>
-        <Link
-         to="."
+        </button>
+        <button
+         onClick={()=> setSearchParams({})}
           className="border-none outline-none font-medium underline w-fit cursor-pointer"
         >
           Clear filters
-        </Link>
+        </button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 py-5 gap-5">
         {filteredVans &&
