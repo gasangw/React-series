@@ -1,10 +1,12 @@
+import uuid from 'react-uuid';
+import DisplayList from "./Components/DisplayList"
+
 function App() {
-
-  return (
-    <>
-  
-    </>
-  )
-}
-
+  let data = ["dog", "cat", "chicken", "cow", "sheep", "horse"]
+   return (
+     <div className="grid justify-center align-middle mx-auto mt-9">
+      {data.map(animal => <DisplayList animal={animal} key={uuid()}/>)}
+     </div>
+   )
+ }
 export default App
